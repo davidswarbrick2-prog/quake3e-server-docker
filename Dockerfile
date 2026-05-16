@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim AS download
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl unzip \
+    && apt-get install -y --no-install-recommends ca-certificates curl unzip \
     && curl -fsSL https://github.com/ec-/Quake3e/releases/download/latest/quake3e-linux-x86_64.zip \
        -o /tmp/quake3e.zip \
     && unzip /tmp/quake3e.zip quake3e.ded.x64 -d /tmp
